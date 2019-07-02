@@ -1,0 +1,11 @@
+<div id="c" *ngIf="loaded == true" class="card">
+  <h4>{{n.Name}}</h4>
+  
+  <img style="padding: 10px" [src]="n.Image" class="card-img-top" alt="...">
+  <div class="card-body">
+    <div class="card-title" *ngIf="clicked==false"><a>{{n.Desc | Summary}}</a></div>
+    <a style="text-decoration: underline"(click)="clicked=true" *ngIf="clicked==false">قرائة المزيد</a>
+    <div class="card-title" *ngIf="clicked==true"><a>{{n.Desc | DeleteTages}}</a></div>
+    <a style="text-decoration: underline"(click)="clicked=false" *ngIf="clicked==true">تفاصيل أقل</a>
+  </div>
+</div>

@@ -1,0 +1,4 @@
+<h2 style="text-align: center ; color: darkblue">الأكثر مشاهدة</h2>
+<ul class="list-group">
+  <li class="list-group-item" *ngFor='let t of topNews' [routerLink]="['/item',t.ID]" >{{t.Name}}</li>
+</ul>

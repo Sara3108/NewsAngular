@@ -1,0 +1,4 @@
+<h2 style="text-align: center ; color: darkblue">المفضلة</h2>
+<ul class="list-group">
+  <li class="list-group-item" *ngFor='let f of fav' [routerLink]="['/item',f.ID]">{{f.Name}}</li>
+</ul>
